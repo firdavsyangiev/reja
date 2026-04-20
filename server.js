@@ -12,15 +12,16 @@ app.use(express.urlencoded({ extended: true }));
 
 // 3: Views code
 app.set("views", "views");
-app.set("view engine", "ejs");
+app.set("view engine", "ejs"); //BSSR
 
 // 4: Rooting code
-app.get("/hello", (req, res) => {
-  res.send(`<h1>Hello World</h1>`);
+app.post("/create-item", (req, res) => {
+  console.log(req.body);
+  res.json({ test: "success" });
 });
 
-app.get("/gift", (req, res) => {
-  res.send(`<h1>Siz sovg'alar bo'limidasiz</h1>`);
+app.get("/", function (req, res) {
+  res.render("harid");
 });
 
 const server = http.createServer(app);
