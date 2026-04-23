@@ -4,6 +4,7 @@
   "age": 20,
   "residence": "South Korea",
   "address": "S.Korea, Busan",
+  "freelance": "Available",
   "languages": ["Uzbek", "Korean", "English"],
   "skills": ["Html", "Css", "JS", "NodeJS", "Python"],
   "extra_skills": [
@@ -14,8 +15,8 @@
     "Git Knowledge"
   ],
   "work_place": "IT Company",
-  "service_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-  "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+  "service_desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+  "about_me": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex. ",
   "city": "Denau",
   "title": ["Flower", "Seedlings", "Gardener", "Old", "New"],
   "flower_desc": ["What is Flower", "What is Seedling", "Who is gardener?"],
