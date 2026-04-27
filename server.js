@@ -26,8 +26,8 @@ app.set("view engine", "ejs"); //BSSR
 
 // 4: Rooting code
 app.post("/create-item", (req, res) => {
-  // console.log(req.body);
-  // res.json({ test: "success" });
+  //   // console.log(req.body);
+  //   // res.json({ test: "success" });
 });
 
 app.get("/author", (req, res) => {
@@ -35,11 +35,13 @@ app.get("/author", (req, res) => {
 });
 
 app.get("/", function (req, res) {
-  res.render("harid");
+  res.render("reja");
 });
 
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function () {
-  console.log(`The server is running succesfully on port ${PORT}`);
+  console.log(
+    `The server is running succesfully on port ${PORT}, http://localhost:${PORT}`,
+  );
 });
