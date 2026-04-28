@@ -1,4 +1,4 @@
-//    >>>>>>>> TASK <<<<<<<
+//    >>>>>>>> TASK-B <<<<<<<
 function countDigits(num) {
   let count = 0;
 
