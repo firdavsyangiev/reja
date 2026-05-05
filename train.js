@@ -1,61 +1,79 @@
-//    >>>>>>>> TASK-C <<<<<<<
-const moment = require("moment");
+//    >>>>>>>> TASK-D <<<<<<<
+function checkContent(a, b) {
+  if (a.length !== b.length) return false;
 
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
+  let count = {};
+  for (let harf of a) {
+    count[harf] = (count[harf] || 0) + 1;
   }
-
-  qoldiq() {
-    const currentTime = moment().format("HH:mm");
-    console.log(
-      `Hozir ${currentTime} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud`,
-    );
-  }
-
-  sotish(nomi, soni) {
-    const currentTime = moment().format("HH:mm");
-
-    if (nomi === "non") {
-      this.non -= soni;
-    } else if (nomi === "lagmon") {
-      this.lagmon -= soni;
-    } else if (nomi === "cola") {
-      this.cola -= soni;
-    } else {
-      console.log("Bunday mahsulot topilmadi");
-      return;
+  for (let harf of b) {
+    if (!count[harf]) {
+      return false;
     }
-
-    console.log(`Hozir ${currentTime} da ${nomi}dan ${soni} ta sotildi`);
+    count[harf]--;
   }
 
-  qabul(nomi, soni) {
-    const currentTime = moment().format("HH:mm");
-
-    if (nomi === "non") {
-      this.non += soni;
-    } else if (nomi === "lagmon") {
-      this.lagmon += soni;
-    } else if (nomi === "cola") {
-      this.cola += soni;
-    } else {
-      console.log("Bunday mahsulot mavjud emas");
-      return;
-    }
-
-    console.log(`Hozir ${currentTime} da ${nomi}dan ${soni} ta qabul qilindi`);
-  }
+  return true;
 }
 
-const shop = new Shop(4, 5, 2);
+//    >>>>>>>> TASK-C <<<<<<<
+// const moment = require("moment");
 
-shop.qoldiq();
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
-shop.qoldiq();
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
+
+//   qoldiq() {
+//     const currentTime = moment().format("HH:mm");
+//     console.log(
+//       `Hozir ${currentTime} da ${this.non} ta non, ${this.lagmon} ta lag'mon va ${this.cola} ta cola mavjud`,
+//     );
+//   }
+
+//   sotish(nomi, soni) {
+//     const currentTime = moment().format("HH:mm");
+
+//     if (nomi === "non") {
+//       this.non -= soni;
+//     } else if (nomi === "lagmon") {
+//       this.lagmon -= soni;
+//     } else if (nomi === "cola") {
+//       this.cola -= soni;
+//     } else {
+//       console.log("Bunday mahsulot topilmadi");
+//       return;
+//     }
+
+//     console.log(`Hozir ${currentTime} da ${nomi}dan ${soni} ta sotildi`);
+//   }
+
+//   qabul(nomi, soni) {
+//     const currentTime = moment().format("HH:mm");
+
+//     if (nomi === "non") {
+//       this.non += soni;
+//     } else if (nomi === "lagmon") {
+//       this.lagmon += soni;
+//     } else if (nomi === "cola") {
+//       this.cola += soni;
+//     } else {
+//       console.log("Bunday mahsulot mavjud emas");
+//       return;
+//     }
+
+//     console.log(`Hozir ${currentTime} da ${nomi}dan ${soni} ta qabul qilindi`);
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+
+// shop.qoldiq();
+// shop.sotish("non", 3);
+// shop.qabul("cola", 4);
+// shop.qoldiq();
 
 //    >>>>>>>> TASK-B <<<<<<<
 // function countDigits(num) {
