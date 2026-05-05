@@ -63,8 +63,8 @@ document.addEventListener("click", function (e) {
     if (confirm("Aniq ochirmoqchimisz?")) {
       axios
         .post("/delete-item", { id: e.target.getAttribute("data-id") })
-        .then((respose) => {
-          console.log(respose.data);
+        .then((response) => {
+          console.log(response.data);
           e.target.parentElement.parentElement.remove();
         })
         .catch((err) => {

@@ -70,7 +70,6 @@ app.post("/edit-item", (req, res) => {
       res.json({ state: "success" });
     },
   );
-  res.end("done");
 });
 
 app.get("/author", (req, res) => {
