@@ -1,20 +1,31 @@
-//    >>>>>>>> TASK-D <<<<<<<
-function checkContent(a, b) {
-  if (a.length !== b.length) return false;
-
-  let count = {};
-  for (let harf of a) {
-    count[harf] = (count[harf] || 0) + 1;
+//    >>>>>>>> TASK-E <<<<<<<
+function getReverse(str) {
+  let reverse = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverse += str[i];
   }
-  for (let harf of b) {
-    if (!count[harf]) {
-      return false;
-    }
-    count[harf]--;
-  }
-
-  return true;
+  return reverse;
 }
+
+console.log(getReverse("Hello world"));
+
+//    >>>>>>>> TASK-D <<<<<
+// function checkContent(a, b) {
+//   if (a.length !== b.length) return false;
+
+//   let count = {};
+//   for (let harf of a) {
+//     count[harf] = (count[harf] || 0) + 1;
+//   }
+//   for (let harf of b) {
+//     if (!count[harf]) {
+//       return false;
+//     }
+//     count[harf]--;
+//   }
+
+//   return true;
+// }
 
 //    >>>>>>>> TASK-C <<<<<<<
 // const moment = require("moment");
