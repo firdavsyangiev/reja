@@ -1,13 +1,32 @@
-//    >>>>>>>> TASK-E <<<<<<<
-function getReverse(str) {
-  let reverse = "";
-  for (let i = str.length - 1; i >= 0; i--) {
-    reverse += str[i];
+//    >>>>>>>> TASK-F <<<<<<<
+function findDoublers(str) {
+  let harf = {};
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+
+    if (harf[char]) {
+      return true;
+    }
+
+    harf[char] = true;
   }
-  return reverse;
+
+  return false;
 }
 
-console.log(getReverse("Hello world"));
+findDoublers("hello");
+
+//    >>>>>>>> TASK-E <<<<<<<
+// function getReverse(str) {
+//   let reverse = "";
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reverse += str[i];
+//   }
+//   return reverse;
+// }
+
+// console.log(getReverse("Hello world"));
 
 //    >>>>>>>> TASK-D <<<<<
 // function checkContent(a, b) {
