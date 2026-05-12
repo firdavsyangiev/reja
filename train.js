@@ -1,21 +1,38 @@
-//    >>>>>>>> TASK-F <<<<<<<
-function findDoublers(str) {
-  let harf = {};
+//    >>>>>>>> TASK-G <<<<<<<
+function getHighestIndex(arr) {
+  let largest = arr[0];
+  let highestIndex = 0;
 
-  for (let i = 0; i < str.length; i++) {
-    let char = str[i];
-
-    if (harf[char]) {
-      return true;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];
+      highestIndex = i;
     }
-
-    harf[char] = true;
   }
 
-  return false;
+  return highestIndex;
 }
 
-findDoublers("hello");
+getHighestIndex([5, 21, 12, 21, 8]);
+
+//    >>>>>>>> TASK-F <<<<<<<
+// function findDoublers(str) {
+//   let harf = {};
+
+//   for (let i = 0; i < str.length; i++) {
+//     let char = str[i];
+
+//     if (harf[char]) {
+//       return true;
+//     }
+
+//     harf[char] = true;
+//   }
+
+//   return false;
+// }
+
+// findDoublers("hello");
 
 //    >>>>>>>> TASK-E <<<<<<<
 // function getReverse(str) {
