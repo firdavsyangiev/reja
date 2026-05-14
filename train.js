@@ -1,19 +1,32 @@
-//    >>>>>>>> TASK-G <<<<<<<
-function getHighestIndex(arr) {
-  let largest = arr[0];
-  let highestIndex = 0;
+//    >>>>>>>> TASK-H <<<<<<<
+function getPositive(arr) {
+  let result = "";
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > largest) {
-      largest = arr[i];
-      highestIndex = i;
+    if (arr[i] > 0) {
+      result += arr[i] + "";
     }
   }
-
-  return highestIndex;
+  return result;
 }
 
-getHighestIndex([5, 21, 12, 21, 8]);
+console.log(getPositive([1, -4, 2]));
+//    >>>>>>>> TASK-G <<<<<<<
+// function getHighestIndex(arr) {
+//   let largest = arr[0];
+//   let highestIndex = 0;
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > largest) {
+//       largest = arr[i];
+//       highestIndex = i;
+//     }
+//   }
+
+//   return highestIndex;
+// }
+
+// getHighestIndex([5, 21, 12, 21, 8]);
 
 //    >>>>>>>> TASK-F <<<<<<<
 // function findDoublers(str) {
