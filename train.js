@@ -1,16 +1,42 @@
-//    >>>>>>>> TASK-H <<<<<<<
-function getPositive(arr) {
-  let result = "";
+//    >>>>>>>> TASK-I <<<<<<<
+function majorityElement(arr) {
+  let count = {};
+  let max = 0;
+  let result = 0;
 
   for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      result += arr[i] + "";
+    let number = arr[i];
+
+    if (count[number]) {
+      count[number]++;
+    } else {
+      count[number] = 1;
+    }
+
+    if (count[number] > max) {
+      max = count[number];
+      result = number;
     }
   }
+
   return result;
 }
 
-console.log(getPositive([1, -4, 2]));
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
+//    >>>>>>>> TASK-H <<<<<<<
+// function getPositive(arr) {
+//   let result = "";
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//       result += arr[i] + "";
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(getPositive([1, -4, 2]));
 //    >>>>>>>> TASK-G <<<<<<<
 // function getHighestIndex(arr) {
 //   let largest = arr[0];
